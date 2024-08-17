@@ -97,15 +97,17 @@
         }
         #boxes {
             margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
         #boxes .box {
-            float: left;
-            width: 30%;
-            padding: 10px;
+            flex: 0 1 calc(33.333% - 20px);
+            padding: 20px;
             text-align: center;
-        }
-        #boxes .box img {
-            width: 90px;
+            background: #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         footer {
             padding: 20px;
@@ -116,6 +118,7 @@
         }
         .skills-icon {
             color: var(--primary-color);
+            margin-bottom: 10px;
         }
         .contact-info {
             margin-top: 20px;
@@ -126,6 +129,13 @@
         }
         .contact-info a:hover {
             text-decoration: underline;
+        }
+        .skill-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skill-list li {
+            margin-bottom: 5px;
         }
     </style>
 </head>
@@ -167,17 +177,32 @@
                 <div class="box">
                     <i class="fas fa-code fa-3x skills-icon"></i>
                     <h3>Languages</h3>
-                    <p>Python, Rust, C/C++, Java, SQL</p>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>Rust</li>
+                        <li>C/C++</li>
+                        <li>Java</li>
+                        <li>SQL</li>
+                    </ul>
                 </div>
                 <div class="box">
                     <i class="fas fa-database fa-3x skills-icon"></i>
                     <h3>Databases</h3>
-                    <p>PostgreSQL, Redis</p>
+                    <ul class="skill-list">
+                        <li>PostgreSQL</li>
+                        <li>Redis</li>
+                        <li>MongoDB</li>
+                        <li>MySQL</li>
+                    </ul>
                 </div>
                 <div class="box">
                     <i class="fas fa-tools fa-3x skills-icon"></i>
-                    <h3>Tools</h3>
-                    <p>Git, WebStorm</p>
+                    <h3>Tools & Technologies</h3>
+                    <ul class="skill-list">
+                        <li>Git & GitHub</li>
+                        <li>Docker</li>
+                        <li>RESTful APIs</li>
+                    </ul>
                 </div>
             </div>
         </div>
