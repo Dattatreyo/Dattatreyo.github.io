@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura&family=Poppins&family=Send+Flowers&family=Tilt+Warp&display=swap" rel="stylesheet">
+    <link href="output.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="header flex items-center justify-start p-4">
+    <img src="./assets/images/pfp.jpg" alt="profile picture"
+         class="pfp size-16 rounded-full">
+    <p class="profession text-white font-jura ml-5">Software/Web Developer</p>
+</div>
+
+<div class="content flex flex-col md:flex-row justify-between items-center p-4">
+    <div class="info md:w-1/2 mb-6 md:mb-0">
+        <h1 class="text-white text-3xl font-bold font-Tilt-Warp mb-8 ml-20 mt-10">
+            DATTATREYO
+        </h1>
+
+        <div class="flex items-center mb-10 mt-10">
+            <span class="font-send-flowers text-8xl tracking-wider text-white">BOSE</span>
+            <div class="flex ml-4 space-x-3">
+                <a href="https://github.com/Dattatreyo" target="_blank">
+                    <img src="./assets/images/github.svg" alt="github" class="w-6 h-6">
+                </a>
+                <a href="https://www.linkedin.com/in/dattatreyobose/" target="_blank">
+                    <img src="./assets/images/linkedin.svg" alt="linkedin" class="w-6 h-6">
+                </a>
+                <a href="mailto:dboseofficial@gmail.com" target="_blank">
+                    <img src="./assets/images/mail.svg" alt="mail" class="w-6 h-6">
+                </a>
+            </div>
+        </div>
+
+
+        <p class="text-white mt-12 mb-10 font-jura">
+            B.Tech undergraduate with a strong interest in Machine Learning, Cloud Computing, and front-end technologies.
+            <br>
+            I focus on Software Architecture and Distributed Systems.
+        </p>
+    </div>
+
+    <div class="fibonacci md:w-1/2 flex justify-center">
+        <img src="./assets/images/goldenshadow.png" alt="golden rectangle" class="golden max-w-full h-auto w-[68%]">
+    </div>
+</div>
+
+
+<div class="footer flex flex-col md:flex-row justify-between p-4">
+    <div class="projects w-full md:w-1/2 mb-4 md:mb-0 md:pr-4">
+        <h2 class="text-center font-semibold font-poppins mb-2">PROJECTS</h2>
+        <div class="w-full max-w-sm mx-auto">
+            <div class="relative overflow-hidden">
+                <div class="flex transition-transform duration-300 ease-in-out" id="cardContainer">
+                    <div class="w-full flex-shrink-0">
+                        <div class="bg-customBeige rounded-lg shadow-md p-3">
+                            <img src="./assets/images/webpage.svg" alt="webpage svg" class="size-8 mb-1">
+                            <p class="text-sm font-semibold mb-1 font-jura">Web Development</p>
+                            <p class="text-xs font-poppins">Development and deployment of various responsive websites and integration.</p>
+                        </div>
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <div class="bg-customBeige rounded-lg shadow-md p-3">
+                            <img src="./assets/images/telegram.svg" alt="telegram svg" class="size-8 mb-1">
+                            <p class="text-sm font-semibold mb-1 font-jura">Telegram Bots</p>
+                            <p class="text-xs font-poppins">Development and deployment of Group management and other utility based bots across Telegram.</p>
+                        </div>
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <div class="bg-customBeige rounded-lg shadow-md p-3">
+                            <img src="./assets/images/filepy.svg" alt="python app svg" class="size-8 mb-1">
+                            <p class="text-sm font-semibold mb-1 font-jura">Python applications</p>
+                            <p class="text-xs font-poppins">Development of various GUI and CLI based applications in Python.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mt-2 flex justify-center" id="paginationDots">
+                <div class="pagination-dot active" onclick="goToPage(0)"></div>
+                <div class="pagination-dot" onclick="goToPage(1)"></div>
+                <div class="pagination-dot" onclick="goToPage(2)"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills w-full md:w-1/2 md:pl-4">
+        <h2 class="text-center font-semibold font-poppins mb-2">SKILLS</h2>
+        <div class="container mx-auto">
+            <div class="flex flex-wrap justify-center gap-2">
+        <span class="flex inline-block bg-red-500 text-white w-30 h-30 flex-col items-center justify-center rounded-md text-xl font-jura p-4">
+            <img src="./assets/images/ml.svg" alt="machine learning" class="w-16 h-16 mb-2">
+            Machine Learning
+        </span>
+                <span class="flex inline-block bg-green-500 text-white w-30 h-30 flex-col items-center justify-center rounded-md text-xl font-jura p-4">
+            <img src="./assets/images/frontend.svg" alt="frontend" class="w-16 h-16 mb-2">
+            Front-end Dev
+        </span>
+                <span class="flex inline-block bg-blue-500 text-white w-30 h-30 flex-col items-center justify-center rounded-md text-xl font-jura p-4">
+            <img src="./assets/images/cloud.svg" alt="cloud" class="w-16 h-16 mb-2">
+            Cloud computing
+        </span>
+                <span class="flex inline-block bg-yellow-300 text-white w-30 h-30 flex-col items-center justify-center rounded-md text-xl font-jura p-4">
+            <img src="./assets/images/webdesign.svg" alt="web design" class="w-16 h-16 mb-2">
+            Web Design
+        </span>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    let currentPage = 0;
+    const totalPages = 3;
+    const container = document.getElementById('cardContainer');
+    const dots = document.querySelectorAll('.pagination-dot');
+
+    function goToPage(page) {
+        currentPage = page;
+        updateCardPosition();
+        updatePaginationDots();
+    }
+
+    function updateCardPosition() {
+        container.style.transform = `translateX(-${currentPage * 100}%)`;
+    }
+
+    function updatePaginationDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentPage);
+        });
+    }
+
+    // Optional: Auto navigation every 3 seconds
+    setInterval(() => {
+        currentPage = (currentPage + 1) % totalPages;
+        updateCardPosition();
+        updatePaginationDots();
+    }, 3000);
+</script>
+</body>
+</html>
